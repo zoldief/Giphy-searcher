@@ -1,6 +1,128 @@
 @import "~normalize.css";
-@import "font.scss";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
-  background-color: red;
+  font-size: 10px;
+  font-family: "PT Sans";
+}
+
+.header {
+  background: #dae2f8;
+  background: -webkit-linear-gradient(to right, #d6a4a4, #dae2f8);
+  background: linear-gradient(to right, #d6a4a4, #dae2f8);
+  margin-bottom: 50px;
+
+  &__inner {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+.logo {
+  font-size: 5em;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+}
+.search {
+  display: flex;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 10px;
+  &__input {
+    background: none;
+    border: none;
+    height: 30px;
+    outline: none;
+    padding-left: 15px;
+    font-size: 2em;
+  }
+
+  &__submit {
+    outline: none;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+  }
+}
+.main {
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.gifs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . .";
+}
+
+.gifs-item {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    margin-bottom: 10px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+  &__caption {
+    text-align: center;
+    font-size: 1.6em;
+    color: #333;
+  }
+}
+
+.footer {
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+
+  &__inner {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.github {
+  background-color: #eee;
+  border-radius: 10px;
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.load-more {
+  background: #e55d87;
+  background: -webkit-linear-gradient(to right, #5fc3e4, #e55d87);
+  background: linear-gradient(to right, #5fc3e4, #e55d87);
+  margin: 50px auto;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 2.3em;
+  padding: 5px 20px;
+  color: #333;
+  cursor: pointer;
 }

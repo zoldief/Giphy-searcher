@@ -29,6 +29,10 @@ module.exports = {
           from: path.resolve(__dirname, "src/assets/favicon.ico"),
           to: "assets",
         },
+        {
+          from: path.resolve(__dirname, "src/assets/images/github.png"),
+          to: "assets/images",
+        },
       ],
     }),
   ],
